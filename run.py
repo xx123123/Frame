@@ -38,4 +38,4 @@ else:
 		#3.执行测试用例
 		res = common.run_test(sheet)
 		logging.info("-------------- Get the result ------------ %s\n", res)
-		
+common.excel_release(path)

@@ -7,7 +7,7 @@ import sys
 
 def getLogger():
     global tezLogPath 
-    tezLogPath = sys.path[0]
+    tezLogPath = sys.path[0] + '\\'
     try:
         tezLogPath
     except NameError:
