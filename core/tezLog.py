@@ -18,5 +18,4 @@ def getLogger():
     f = open(file, 'w')
     f.close()
     logging.basicConfig(filename=file, level=logging.INFO, format=FORMAT)
-    #logging.basicConfig(level=logging.INFO, format=FORMAT)
     return logging

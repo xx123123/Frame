@@ -30,8 +30,6 @@ def data_conversion(params):
     data_param = {}
     if params:
         for param in params.split('&'):
-            #data_tmp = param.split('=')
-            #data_param[data_tmp[0]] = ''.join(data_value for data_value in data_tmp[1:])
             index_tmp = param.find('=')
             data_param[param[:index_tmp]] = param[index_tmp + 1:]
     return data_param
@@ -47,12 +45,15 @@ def run_test(sheet):
         testMethod      = excel.get_content(sheet, i, gl.CASE_METHOD)
         testHeaders     = data_conversion(excel.get_content(sheet, i, gl.CASE_HEADERS))
         testCode        = excel.get_content(sheet, i, gl.CASE_CODE)
-        actualCode      = str(request.api_test(testMethod, testUrl, testData, testHeaders))
+        testExcept      = data_conversion(excel.get_content(sheet, i, gl.CASE_EXCEPT))
+        actualCode      = str(request.api_test(testMethod, testUrl, testData, testHeaders)[0])
         expectCode      = str(int(testCode))
-        failResults     = PrettyTable(["Number", "Method", "Url", "Data", "ActualCode", "ExpectCode"])
+        testActual      = request.api_test(testMethod, testUrl, testData, testHeaders)[1]
+        
+        failResults     = PrettyTable(["Number", "Method", "Url", "Data", "ActualCode", "ExpectCode", "testAcual", "testExcept"])
         failResults.align["Number"] = "1"
         failResults.padding_width = 1
-        failResults.add_row([testNumber, testMethod, testUrl, testData, actualCode, expectCode]) 
+        failResults.add_row([testNumber, testMethod, testUrl, testData, actualCode, expectCode, testActual, testExcept]) 
         if actualCode != expectCode:
             logging.info("Number %s", testNumber)
             logging.info("FailCase %s", testName)
@@ -60,10 +61,17 @@ def run_test(sheet):
             logging.info("\n" + str(failResults))
             print "FailureInfo"
             print failResults
-            fail += 1
+            fail += 1    
         else:
-            logging.info("Number %s", testNumber)
-            logging.info("TrueCase %s", testName)
+            for key_tmp in testExcept:
+                if not testActual.has_key(key_tmp) and testActual[key_tmp] == testExcept[key_tmp]:
+                    logging.info("Number %s", testNumber)
+                    logging.info("FailCase %s", testName)
+                    logging.info("FailureInfo")
+                    logging.info("\n" + str(failResults))
+                    print "FailureInfo"
+                    print failResults
+                    fail += 1  
     if fail > 0:
         return False
     return True

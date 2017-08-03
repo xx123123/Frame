@@ -21,8 +21,7 @@ def api_test(method, url, data, headers):
         if method == 'get':
             results = requests.get(url=url, params=data, headers=headers)
         response = results.json()
-        #code = response.get('code')
         code = results.status_code
-        return code
+        return code, response
     except Exception, e:
         logging.error('service is error', e)
