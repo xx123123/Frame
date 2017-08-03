@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>Python Test Report</h1>
-<p class='attribute'><strong>Start Time:</strong> 2017-07-31 15:21:05</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:01.796000</p>
-<p class='attribute'><strong>Status:</strong> Pass 4 Failure 5</p>
+<p class='attribute'><strong>Start Time:</strong> 2017-08-03 13:50:04</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:03.342000</p>
+<p class='attribute'><strong>Status:</strong> Pass 7 Failure 4</p>
 
 <p class='description'>This  is Python  Report</p>
 </div>
@@ -223,42 +223,82 @@ function showOutput(id, name) {
 
 <tr class='failClass'>
     <td>TestOne</td>
-    <td>9</td>
+    <td>11</td>
+    <td>7</td>
     <td>4</td>
-    <td>5</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',9)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c1',11)">Detail</a></td>
 </tr>
 
 <tr id='pt1.1' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_Frame</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt1.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_Frame</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='ft1.3' class='none'>
-    <td class='failCase'><div class='testcase'>test_Frame</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
-        fail</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
 
-    <div id='div_ft1.3' class="popup_window">
+    <div id='div_pt1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.3').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.3: Traceback (most recent call last):
-  File "D:\code\git\Frame\HTMLTestRunner_test.py", line 60, in test_Frame
-    self.assertEqual(self.actualCode, self.expectCode, str(self.info))
-AssertionError: 错误2
+pt1.1: actual--&gt;200
+except--&gt;200
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Frame</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        pass</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2: actual--&gt;200
+except--&gt;200
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Frame</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: actual--&gt;200
+except--&gt;200
 
 
         </pre>
@@ -270,33 +310,21 @@ AssertionError: 错误2
 
 <tr id='pt1.4' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_Frame</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt1.5' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_Frame</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='ft1.6' class='none'>
-    <td class='failCase'><div class='testcase'>test_Frame</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.6')" >
-        fail</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        pass</a>
 
-    <div id='div_ft1.6' class="popup_window">
+    <div id='div_pt1.4' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.6').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.6: Traceback (most recent call last):
-  File "D:\code\git\Frame\HTMLTestRunner_test.py", line 60, in test_Frame
-    self.assertEqual(self.actualCode, self.expectCode, str(self.info))
-AssertionError: 456.0
+pt1.4: actual--&gt;200
+except--&gt;200
 
 
         </pre>
@@ -306,25 +334,75 @@ AssertionError: 456.0
     </td>
 </tr>
 
-<tr id='ft1.7' class='none'>
-    <td class='failCase'><div class='testcase'>test_Frame</div></td>
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Frame</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.7')" >
-        fail</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        pass</a>
 
-    <div id='div_ft1.7' class="popup_window">
+    <div id='div_pt1.5' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.7').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.7: Traceback (most recent call last):
-  File "D:\code\git\Frame\HTMLTestRunner_test.py", line 60, in test_Frame
-    self.assertEqual(self.actualCode, self.expectCode, str(self.info))
-AssertionError: 456.0
+pt1.5: actual--&gt;200
+except--&gt;200
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Frame</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+        pass</a>
+
+    <div id='div_pt1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.6: actual--&gt;200
+except--&gt;200
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Frame</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.7')" >
+        pass</a>
+
+    <div id='div_pt1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.7: actual--&gt;200
+except--&gt;200
 
 
         </pre>
@@ -349,8 +427,10 @@ AssertionError: 456.0
         </div>
         <pre>
         
-ft1.8: Traceback (most recent call last):
-  File "D:\code\git\Frame\HTMLTestRunner_test.py", line 60, in test_Frame
+ft1.8: actual--&gt;200
+except--&gt;300
+Traceback (most recent call last):
+  File "D:\code\git\Frame\HTMLTestRunner_test.py", line 62, in test_Frame
     self.assertEqual(self.actualCode, self.expectCode, str(self.info))
 AssertionError: 456.0
 
@@ -377,8 +457,70 @@ AssertionError: 456.0
         </div>
         <pre>
         
-ft1.9: Traceback (most recent call last):
-  File "D:\code\git\Frame\HTMLTestRunner_test.py", line 60, in test_Frame
+ft1.9: actual--&gt;200
+except--&gt;300
+Traceback (most recent call last):
+  File "D:\code\git\Frame\HTMLTestRunner_test.py", line 62, in test_Frame
+    self.assertEqual(self.actualCode, self.expectCode, str(self.info))
+AssertionError: 456.0
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.10' class='none'>
+    <td class='failCase'><div class='testcase'>test_Frame</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.10')" >
+        fail</a>
+
+    <div id='div_ft1.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.10: actual--&gt;200
+except--&gt;300
+Traceback (most recent call last):
+  File "D:\code\git\Frame\HTMLTestRunner_test.py", line 62, in test_Frame
+    self.assertEqual(self.actualCode, self.expectCode, str(self.info))
+AssertionError: 456.0
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.11' class='none'>
+    <td class='failCase'><div class='testcase'>test_Frame</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.11')" >
+        fail</a>
+
+    <div id='div_ft1.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.11: actual--&gt;200
+except--&gt;300
+Traceback (most recent call last):
+  File "D:\code\git\Frame\HTMLTestRunner_test.py", line 62, in test_Frame
     self.assertEqual(self.actualCode, self.expectCode, str(self.info))
 AssertionError: 456.0
 
@@ -392,9 +534,9 @@ AssertionError: 456.0
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>9</td>
+    <td>11</td>
+    <td>7</td>
     <td>4</td>
-    <td>5</td>
     <td>0</td>
     <td>&nbsp;</td>
 </tr>

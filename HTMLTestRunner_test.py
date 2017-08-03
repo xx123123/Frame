@@ -37,7 +37,7 @@ class FramedTestCase(unittest.TestCase):
 				testMethod      = excel.get_content(sheet, i, gl.CASE_METHOD)
 				testHeaders     = common.data_conversion(excel.get_content(sheet, i, gl.CASE_HEADERS))
 				testCode        = excel.get_content(sheet, i, gl.CASE_CODE)
-				actualCode      = str(request.api_test(testMethod, testUrl, testData, testHeaders))
+				actualCode      = str(request.api_test(testMethod, testUrl, testData, testHeaders)[0])
 				expectCode      = str(int(testCode))
 				info			= testName
 				suite.addTest(testcase_klass(name, param=param, actualCode=actualCode, expectCode=expectCode, info=info))
@@ -57,6 +57,8 @@ class FramedTestCase(unittest.TestCase):
 
 class TestOne(FramedTestCase):
 	def test_Frame(self):
+		print 'actual-->' + str(self.actualCode)
+		print 'except-->' + str(self.expectCode)
 		self.assertEqual(self.actualCode, self.expectCode, str(self.info))
 
 #添加Suite
@@ -69,8 +71,7 @@ def Suite():
 	suiteTest = unittest.TestSuite()
 	for module in modules:
 		suiteTest.addTest(FramedTestCase.Frame(TestOne, param=module))
-	excel.release(pa
-		th)
+	excel.release(path)
 	return suiteTest
 
 if __name__ == '__main__':

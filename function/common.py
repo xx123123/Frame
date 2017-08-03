@@ -11,6 +11,7 @@ from matplotlib.delaunay.testfuncs import TestData
 from core.tezRequest import logging
 import sys
 import time
+import json
 
 filename = gl.FILE_NAME
 
@@ -50,10 +51,10 @@ def run_test(sheet):
         expectCode      = str(int(testCode))
         testActual      = request.api_test(testMethod, testUrl, testData, testHeaders)[1]
         
-        failResults     = PrettyTable(["Number", "Method", "Url", "Data", "ActualCode", "ExpectCode", "testAcual", "testExcept"])
+        failResults     = PrettyTable(["Number", "Method", "Url", "Data", "ExpectCode", "ActualCode", "testExcept", "testAcual"])
         failResults.align["Number"] = "1"
         failResults.padding_width = 1
-        failResults.add_row([testNumber, testMethod, testUrl, testData, actualCode, expectCode, testActual, testExcept]) 
+        failResults.add_row([testNumber, testMethod, testUrl, json.dumps(testData), expectCode, actualCode, json.dumps(testExcept), json.dumps(testActual)]) 
         if actualCode != expectCode:
             logging.info("Number %s", testNumber)
             logging.info("FailCase %s", testName)
